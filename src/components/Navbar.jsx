@@ -85,10 +85,26 @@ const Navbar = () => {
                 {/* Mobile Menu Links */}
                 {menubar && (
                     <ul className="md:hidden flex flex-col items-center gap-4 pb-6 font-medium bg-[#F3ECE4] w-full absolute left-0 shadow-lg transition-all duration-300 border-b border-gray-200">
-                        <li><button onClick={() => scrollToSection('home')} className="hover:text-black py-2">HOME</button></li>
-                        <li><button onClick={() => scrollToSection('products')} className="hover:text-black py-2">Products</button></li>
-                        <li><button onClick={() => scrollToSection('about')} className="hover:text-black py-2">About</button></li>
-                        <li><button onClick={() => scrollToSection('contact')} className="hover:text-black py-2">Contact</button></li>
+                        <Link to="/">
+                            <li className='hover:text-black transition-colors cursor-pointer'>HOME
+                            </li>
+                        </Link>
+                        <Link to="/categories">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Categories
+                            </li>
+                        </Link>
+                        <Link to="/products">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Products
+                            </li>
+                        </Link>
+                        <Link to="/about">
+                            <li className='hover:text-black transition-colors cursor-pointer'> About
+                            </li>
+                        </Link>
+                        <Link to="/contact">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Contact
+                            </li>
+                        </Link>
                         <div className='pt-2 w-3/4'>
                             <button className='w-full flex items-center justify-center gap-2 bg-black text-white font-medium py-2.5 rounded-xl text-sm shadow-md'>
                                 <FiUser /> Login

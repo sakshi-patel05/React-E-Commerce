@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import categoriesData from '../data/categoryData'
+import { useNavigate } from 'react-router'
 
 const SearchCategory = () => {
     const [categories, setCategories] = useState([])
+    const navigate = useNavigate()
     const colors =[
         "bg-yellow-100",
         "bg-pink-100",
@@ -95,7 +97,10 @@ const SearchCategory = () => {
 
                                 {/* Bottom Action Button */}
                                 <div className='pt-3 sm:pt-6'>
-                                    <button className='w-full bg-black hover:bg-gray-800 text-white text-[10px] sm:text-xs md:text-sm font-semibold py-2 sm:py-3 px-2 sm:px-4 rounded-xl transition-all duration-300 shadow-md group-hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-1 sm:gap-2'>
+                                       <button 
+                                       className='w-full bg-black hover:bg-gray-800 text-white text-[10px] sm:text-xs md:text-sm font-semibold py-2 sm:py-3 px-2 sm:px-4 rounded-xl transition-all duration-300 shadow-md group-hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-1 sm:gap-2'
+                                       onClick={()=>navigate(`/categories/${category.slug}`)}
+                                       >
                                         <span className='truncate'>Explore {category.name}</span>
                                         <span className='group-hover:translate-x-1 transition-transform hidden sm:inline'>→</span>
                                     </button>
