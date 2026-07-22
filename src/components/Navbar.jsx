@@ -19,7 +19,7 @@ const Navbar = () => {
         <nav className='bg-[#F7F2EC] shadow-sm sticky top-0 z-50'>
             <div className='max-w-7xl mx-auto px-5'>
                 <div className='grid grid-cols-3 items-center h-20'>
-                    
+
                     {/* Brand Logo */}
                     <div onClick={() => scrollToSection('home')} className='flex items-center gap-2.5 cursor-pointer justify-start'>
                         <div className='bg-black text-white p-2.5 rounded-xl flex items-center justify-center shadow-md'>
@@ -33,18 +33,20 @@ const Navbar = () => {
                     {/* Desktop Menu with Smooth Scroll */}
                     <ul className='hidden md:flex justify-center gap-8 font-medium text-gray-700 text-sm tracking-wide'>
                         <li><button onClick={() => scrollToSection('home')} className='hover:text-black transition-colors cursor-pointer'>HOME</button></li>
+                        <li><button onClick={() => scrollToSection('category')} className='hover:text-black transition-colors cursor-pointer'>Category</button></li>
                         <li><button onClick={() => scrollToSection('products')} className='hover:text-black transition-colors cursor-pointer'>Products</button></li>
                         <li><button onClick={() => scrollToSection('about')} className='hover:text-black transition-colors cursor-pointer'>About</button></li>
                         <li><button onClick={() => scrollToSection('contact')} className='hover:text-black transition-colors cursor-pointer'>Contact</button></li>
+
                     </ul>
 
                     {/* Right Actions */}
-                    <div className='hidden md:flex items-center justify-end gap-4'>
+                    <div className='hidden md:flex items-center justify-end gap-5'>
                         <button className='p-2.5 rounded-full bg-[#EFE7DE] hover:bg-[#E5DCD2] text-gray-800 transition-colors cursor-pointer'>
                             <FiSearch className='text-lg' />
                         </button>
-                        
-                        <button className='flex items-center gap-2 bg-black hover:bg-gray-800 text-white font-medium px-5 py-2.5 rounded-xl text-sm transition-all shadow-md cursor-pointer'>
+
+                        <button className='flex items-center gap-4 bg-black hover:bg-gray-800 text-white font-medium px-5 py-2.5 rounded-xl text-sm transition-all shadow-md cursor-pointer'>
                             <FiUser className='text-base' />
                             Login
                         </button>

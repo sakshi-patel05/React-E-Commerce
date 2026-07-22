@@ -5,6 +5,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import SearchCategory from './components/SearchCategory'
 import Footer from './components/Footer'
+import Products from './components/Products'
 
 const App = () => {
   return (
@@ -16,8 +17,12 @@ const App = () => {
         <Hero />
       </section>
 
-      <section id="products">
+      <section id="category">
         <SearchCategory />
+      </section>
+
+      <section id='products'>
+        <Products />
       </section>
 
       <section id="about">

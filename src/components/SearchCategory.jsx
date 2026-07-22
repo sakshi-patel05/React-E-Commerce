@@ -4,6 +4,23 @@ import categoriesData from '../data/categoryData'
 
 const SearchCategory = () => {
     const [categories, setCategories] = useState([])
+    const colors =[
+        "bg-yellow-100",
+        "bg-pink-100",
+        "bg-purple-100",
+        // "bg-cyan-100",
+        "bg-orange-100",
+        "bg-indigo-100",
+        "bg-emerald-100",
+        "bg-rose-100",
+        "bg-amber-100",
+        "bg-violet-100",
+        "bg-fuchsia-100",
+        "bg-lime-100",
+        "bg-stone-100",
+        "bg-neutral-100",
+        "bg-fuchsia-100"
+    ]
 
     // API data fetch
     useEffect(() => {
@@ -23,7 +40,7 @@ const SearchCategory = () => {
 
     return (
         <div className='bg-[#F7F2EC] py-5'
-            id='products'
+            id='category'
         >
             <div className='max-w-7xl mx-auto px-5'>
 
@@ -48,17 +65,17 @@ const SearchCategory = () => {
                         );
 
                         // Category name aur slug nikalne ke liye
-                        // const title = category.name || category.slug.replace('-', ' ');
+                        const title = category.name || category.slug.replace('-', ' ');
 
                         return (
                             <div
                                 key={category.slug}
-                                className='group bg-[#F3ECE4] rounded-3xl p-6 shadow-sm hover:shadow-xl border border-[#E8DDD1] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between cursor-pointer relative overflow-hidden'
+                                className={`group ${colors[index % colors.length]} rounded-3xl p-6 shadow-sm hover:shadow-xl border border-[#E8DDD1] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between cursor-pointer relative overflow-hidden`}
                             >
                                 {/* Top Content: Image & Title */}
                                 <div>
                                     {/* Image Container */}
-                                    <div className='w-full h-44 rounded-2xl overflow-hidden shadow-inner bg-pink-400 mb-5 border border-[#E5DBCF] flex items-center justify-center'>
+                                    <div className='w-full h-44 rounded-2xl overflow-hidden shadow-inner mb-5 border border-[#E5DBCF] flex items-center justify-center bg-white/50'>
                                         <img
                                             src={categoryImage?.image}
                                             alt={category.slug}
@@ -71,9 +88,9 @@ const SearchCategory = () => {
                                         {category.name}
                                     </h3>
 
-                                    {/* Paragraph / Description Added */}
+                                    {/* Paragraph / Description Added (3. Yahan 'name' ki jagah 'title' use kiya hai) */}
                                     <p className='text-xs md:text-sm text-gray-600 line-clamp-2 leading-relaxed'>
-                                        Discover the latest trends and best deals in premium {name.toLowerCase()}. Shop now to upgrade your collection.
+                                        Discover the latest trends and best deals in premium {title.toLowerCase()}. Shop now to upgrade your collection.
                                     </p>
                                 </div>
 
