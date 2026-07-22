@@ -17,6 +17,10 @@ const SearchCategory = () => {
             });
     }, []);
 
+    if(!categories){
+        return <h1 className='text-center text-6xl'>Loding...</h1>
+    }
+
     return (
         <div className='bg-[#F7F2EC] py-5'>
             <div className='max-w-7xl mx-auto px-5'>
@@ -52,9 +56,9 @@ const SearchCategory = () => {
                                 {/* Top Content: Image & Title */}
                                 <div>
                                     {/* Image Container */}
-                                    <div className='w-full h-44 rounded-2xl overflow-hidden shadow-inner bg-white/60 mb-5 border border-[#E5DBCF] flex items-center justify-center'>
+                                    <div className='w-full h-44 rounded-2xl overflow-hidden shadow-inner bg-pink-400 mb-5 border border-[#E5DBCF] flex items-center justify-center'>
                                         <img 
-                                            src={categoryImage?.image || "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&auto=format&fit=crop&q=60"} 
+                                            src={categoryImage?.image} 
                                             alt={category.slug}
                                             className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                                         />
