@@ -1,14 +1,16 @@
 import React from 'react'
-import { FiShoppingBag, FiMail, FiPhone, FiMapPin, FiInstagram, FiFacebook, FiTwitter, FiLinkedin } from 'react-icons/fi'
+import { FiShoppingBag, FiMail, FiPhone, FiMapPin, FiInstagram, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { TbBrandWebflow } from "react-icons/tb";
+
 
 const Footer = () => {
     return (
         <footer className='bg-[#EFE7DE] text-gray-800 pt-16 pb-8 border-t border-[#E2D6CB]'>
             <div className='max-w-7xl mx-auto px-5'>
-                
+
                 {/* Top Grid Section */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12'>
-                    
+
                     {/* Column 1: Brand Info (2 spans on large screens) */}
                     <div className='lg:col-span-2 space-y-4'>
                         <div className='flex items-center gap-2.5 cursor-pointer'>
@@ -27,13 +29,13 @@ const Footer = () => {
                             <a href='#' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
                                 <FiInstagram />
                             </a>
-                            <a href='#' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
-                                <FiFacebook />
+                            <a href='https://sakshi-portfolio-kappa-five.vercel.app/' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
+                                <TbBrandWebflow />
                             </a>
-                            <a href='#' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
-                                <FiTwitter />
+                            <a href='https://github.com/sakshi-patel05' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
+                                <FiGithub />
                             </a>
-                            <a href='#' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
+                            <a href='https://www.linkedin.com/in/sakshi-patel-5a0999374/' className='w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-amber-700 transition-colors shadow-sm'>
                                 <FiLinkedin />
                             </a>
                         </div>
@@ -51,7 +53,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 3: Customer Service */}
-                    <div className='space-y-4'>
+                    {/* <div className='space-y-4'>
                         <h4 className='text-base font-bold text-gray-900 tracking-wide uppercase'>Customer Care</h4>
                         <ul className='space-y-2.5 text-sm text-gray-600 font-medium'>
                             <li><a href='#' className='hover:text-black transition-colors'>Privacy Policy</a></li>
@@ -59,7 +61,7 @@ const Footer = () => {
                             <li><a href='#' className='hover:text-black transition-colors'>Shipping & Returns</a></li>
                             <li><a href='#' className='hover:text-black transition-colors'>FAQs</a></li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Column 4: Newsletter / Contact Info */}
                     <div className='space-y-4'>
@@ -68,9 +70,9 @@ const Footer = () => {
                             Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
                         </p>
                         <form onSubmit={(e) => e.preventDefault()} className='space-y-2'>
-                            <input 
-                                type='email' 
-                                placeholder='Enter your email' 
+                            <input
+                                type='email'
+                                placeholder='Enter your email'
                                 className='w-full px-4 py-2.5 rounded-xl bg-white border border-gray-200 text-xs focus:outline-none focus:border-black'
                             />
                             <button className='w-full bg-black hover:bg-amber-700 text-white font-medium py-2.5 rounded-xl text-xs transition-all shadow-md cursor-pointer'>

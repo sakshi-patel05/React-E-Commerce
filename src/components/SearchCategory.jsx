@@ -17,16 +17,16 @@ const SearchCategory = () => {
             });
     }, []);
 
-    if(!categories){
+    if (!categories) {
         return <h1 className='text-center text-6xl'>Loding...</h1>
     }
 
     return (
         <div className='bg-[#F7F2EC] py-5'
-        id='products'
+            id='products'
         >
             <div className='max-w-7xl mx-auto px-5'>
-                
+
                 {/* Section Header */}
                 <div className='text-center md:text-left mb-10'>
                     <span className='text-xs font-bold tracking-widest text-amber-700 uppercase bg-[#EFE7DE] px-3 py-1 rounded-full'>
@@ -59,8 +59,8 @@ const SearchCategory = () => {
                                 <div>
                                     {/* Image Container */}
                                     <div className='w-full h-44 rounded-2xl overflow-hidden shadow-inner bg-pink-400 mb-5 border border-[#E5DBCF] flex items-center justify-center'>
-                                        <img 
-                                            src={categoryImage?.image} 
+                                        <img
+                                            src={categoryImage?.image}
                                             alt={category.slug}
                                             className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                                         />
@@ -80,7 +80,7 @@ const SearchCategory = () => {
                                 {/* Bottom Action Button */}
                                 <div className='pt-6'>
                                     <button className='w-full bg-black hover:bg-gray-800 text-white text-xs md:text-sm font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-md group-hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-2'>
-                                        <span>Explore Now</span>
+                                        <span>Explore {category.name}</span>
                                         <span className='group-hover:translate-x-1 transition-transform'>→</span>
                                     </button>
                                 </div>

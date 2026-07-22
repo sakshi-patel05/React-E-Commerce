@@ -3,8 +3,9 @@ import React from 'react'
 const Hero = () => {
     return (
         <section 
-        className='bg-[#F7F2EC] py-12 md:py-20'
         id='home'
+        className='bg-[#F7F2EC] py-12 md:py-17'
+       
         >
             <div className='max-w-7xl mx-auto px-5'>
                 
