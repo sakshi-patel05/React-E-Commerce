@@ -22,7 +22,9 @@ const SearchCategory = () => {
     }
 
     return (
-        <div className='bg-[#F7F2EC] py-5'>
+        <div className='bg-[#F7F2EC] py-5'
+        id='products'
+        >
             <div className='max-w-7xl mx-auto px-5'>
                 
                 {/* Section Header */}

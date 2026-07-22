@@ -2,7 +2,10 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <section className='bg-[#F7F2EC] py-12 md:py-20'>
+        <section 
+        className='bg-[#F7F2EC] py-12 md:py-20'
+        id='home'
+        >
             <div className='max-w-7xl mx-auto px-5'>
                 
                 {/* Main Banner Card */}
