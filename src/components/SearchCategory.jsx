@@ -42,11 +42,11 @@ const SearchCategory = () => {
                         );
 
                         // Category name aur slug nikalne ke liye
-                        const title = category.name || category.slug.replace('-', ' ');
+                        // const title = category.name || category.slug.replace('-', ' ');
 
                         return (
                             <div
-                                key={category.slug || index}
+                                key={category.slug}
                                 className='group bg-[#F3ECE4] rounded-3xl p-6 shadow-sm hover:shadow-xl border border-[#E8DDD1] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between cursor-pointer relative overflow-hidden'
                             >
                                 {/* Top Content: Image & Title */}
@@ -62,12 +62,12 @@ const SearchCategory = () => {
 
                                     {/* Category Title */}
                                     <h3 className='text-lg font-bold text-gray-900 capitalize tracking-wide mb-2'>
-                                        {title}
+                                        {category.name}
                                     </h3>
 
                                     {/* Paragraph / Description Added */}
                                     <p className='text-xs md:text-sm text-gray-600 line-clamp-2 leading-relaxed'>
-                                        Discover the latest trends and best deals in premium {title.toLowerCase()}. Shop now to upgrade your collection.
+                                        Discover the latest trends and best deals in premium {name.toLowerCase()}. Shop now to upgrade your collection.
                                     </p>
                                 </div>
 
