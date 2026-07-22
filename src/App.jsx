@@ -6,33 +6,24 @@ import Contact from './components/Contact'
 import SearchCategory from './components/SearchCategory'
 import Footer from './components/Footer'
 import Products from './components/Products'
+import { Routes ,Route } from 'react-router'
+import Home from './pages/Home'
 
 const App = () => {
   return (
     <div className='min-h-screen bg-[#F7F2EC] scroll-smooth'>
-      <Navbar />
-      
-      {/* Har section ki unique ID di gayi hai */}
-      <section id="home">
-        <Hero />
-      </section>
+    <Navbar />
 
-      <section id="category">
-        <SearchCategory />
-      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<SearchCategory />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={ <Contact />} />
 
-      <section id='products'>
-        <Products />
-      </section>
 
-      <section id="about">
-        <About />
-      </section>
-
-      <section id="contact">
-        <Contact />
-      </section>
-      <Footer />
+      </Routes>
+    <Footer />  
     </div>
   )
 }

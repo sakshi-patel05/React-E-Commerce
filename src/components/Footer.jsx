@@ -68,15 +68,15 @@ const Footer = () => {
                         <h4 className='text-sm sm:text-base font-bold text-gray-900 tracking-wide uppercase'>Contact Us</h4>
                         <div className='space-y-2 text-xs sm:text-sm text-gray-600 font-medium'>
                             <div className='flex items-center gap-2'>
-                                <FiMapPin className='text-amber-700 flex-shrink-0' />
+                                <FiMapPin className='text-amber-700' />
                                 <span>New Delhi, India</span>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <FiPhone className='text-amber-700 flex-shrink-0' />
+                                <FiPhone className='text-amber-700' />
                                 <span>+91 98765 43210</span>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <FiMail className='text-amber-700 flex-shrink-0' />
+                                <FiMail className='text-amber-700' />
                                 <span>support@shopstore.com</span>
                             </div>
                         </div>

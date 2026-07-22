@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { FiShoppingBag, FiSearch, FiUser } from "react-icons/fi";
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const [menubar, setManBar] = useState(false)
@@ -32,12 +33,26 @@ const Navbar = () => {
 
                     {/* Desktop Menu with Smooth Scroll */}
                     <ul className='hidden md:flex justify-center gap-8 font-medium text-gray-700 text-sm tracking-wide'>
-                        <li><button onClick={() => scrollToSection('home')} className='hover:text-black transition-colors cursor-pointer'>HOME</button></li>
-                        <li><button onClick={() => scrollToSection('category')} className='hover:text-black transition-colors cursor-pointer'>Category</button></li>
-                        <li><button onClick={() => scrollToSection('products')} className='hover:text-black transition-colors cursor-pointer'>Products</button></li>
-                        <li><button onClick={() => scrollToSection('about')} className='hover:text-black transition-colors cursor-pointer'>About</button></li>
-                        <li><button onClick={() => scrollToSection('contact')} className='hover:text-black transition-colors cursor-pointer'>Contact</button></li>
-
+                        <Link to="/">
+                            <li className='hover:text-black transition-colors cursor-pointer'>HOME
+                            </li>
+                        </Link>
+                        <Link to="/categories">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Categories
+                            </li>
+                        </Link>
+                        <Link to="/products">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Products
+                            </li>
+                        </Link>
+                        <Link to="/about">
+                            <li className='hover:text-black transition-colors cursor-pointer'> About
+                            </li>
+                        </Link>
+                        <Link to="/contact">
+                            <li className='hover:text-black transition-colors cursor-pointer'>Contact
+                            </li>
+                        </Link>
                     </ul>
 
                     {/* Right Actions */}
