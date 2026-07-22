@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Contact from './components/Contact'
 import SearchCategory from './components/SearchCategory'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       <section id="contact">
         <Contact />
       </section>
+      <Footer />
     </div>
   )
 }
