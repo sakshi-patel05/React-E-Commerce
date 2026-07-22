@@ -33,8 +33,15 @@ const Hero = () => {
                             </button>
                         </div>
                     </div>
-
-
+                     {/* Right Side Image / Model Showcase */}
+                    <div className='relative z-10 flex justify-center items-center'>
+                        <div className='w-full max-w-sm h-[320px] md:h-[400px] flex items-center justify-center bg-[#E5D7C9] rounded-2xl overflow-hidden shadow-inner border border-[#D9C8B5]'>
+                            <span className='text-gray-500 font-medium text-sm text-center px-4'>
+                              <img className='' src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b3/2a/f7/60/3c/v1_E10/E1019BL0.jpg?w=1400&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=b792572b5e9f56550e922e78e0d59bfe349c943bdf9c8f1ef0fddc5416787c04"
+                               alt="" />
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
