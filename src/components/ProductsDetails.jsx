@@ -7,6 +7,19 @@ const ProductsDetails = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const colors = [
+        "bg-yellow-100",
+        "bg-pink-100",
+        "bg-purple-100",
+        "bg-orange-100",
+        "bg-indigo-100",
+        "bg-emerald-100",
+        "bg-rose-100",
+        "bg-amber-100",
+        "bg-violet-100",
+        "bg-fuchsia-100"
+    ];
+
     useEffect(() => {
         setLoading(true);
         axios
@@ -41,27 +54,27 @@ const ProductsDetails = () => {
 
             {/* Products Grid - Mobile par 2 columns */}
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6'>
-                {products.map((product) => (
+                {products.map((product, index) => (
                     <div
                         key={product.id}
                         className='group bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col justify-between p-2.5 sm:p-4'
                     >
-                        {/* Image Container */}
-                        <div className='w-full h-36 sm:h-52 bg-gray-50 rounded-xl sm:rounded-2xl overflow-hidden flex items-center justify-center p-2 sm:p-3 relative'>
+                        {/* Image Container with Dynamic Light Colors */}
+                        <div className={`w-24 h-24 sm:w-36 sm:h-36 mx-auto ${colors[index % colors.length]} rounded-full overflow-hidden flex items-center justify-center p-2 relative shadow-inner border border-white/60`}>
                             <img
                                 src={product.thumbnail}
                                 alt={product.title}
-                                className='w-full h-full object-cover rounded-lg sm:rounded-xl group-hover:scale-105 transition-transform duration-500'
+                                className='w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500'
                             />
                         </div>
 
                         {/* Product Details */}
                         <div className='py-2.5 sm:py-4 flex flex-col flex-grow justify-between'>
                             <div>
-                                <h3 className='font-bold text-gray-900 text-xs sm:text-base line-clamp-1 group-hover:text-amber-700 transition-colors'>
+                                <h3 className='font-bold text-gray-900 text-xs sm:text-base line-clamp-1 group-hover:text-amber-700 transition-colors text-center sm:text-left'>
                                     {product.title}
                                 </h3>
-                                <p className='text-gray-500 text-[10px] sm:text-xs mt-1 line-clamp-2 leading-relaxed'>
+                                <p className='text-gray-500 text-[10px] sm:text-xs mt-1 line-clamp-2 leading-relaxed text-center sm:text-left'>
                                     {product.description}
                                 </p>
                             </div>
