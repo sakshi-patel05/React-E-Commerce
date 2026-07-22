@@ -1,24 +1,8 @@
-// src/data/categories.js
-export const categoriesData = [
-  {
-    "slug": "beauty",
-    "name": "Beauty",
-    "url": "https://dummyjson.com/products/category/beauty"
-  },
-  {
-    "slug": "fragrances",
-    "name": "Fragrances",
-    "url": "https://dummyjson.com/products/category/fragrances"
-  },
-  {
-    "slug": "furniture",
-    "name": "Furniture",
-    "url": "https://dummyjson.com/products/category/furniture"
-  },
-  {
-    "slug": "groceries",
-    "name": "Groceries",
-    "url": "https://dummyjson.com/products/category/groceries"
-  }
-  // Aap baki categories bhi yahan paste kar sakte hain
+// src/data/categoriesData.js
+const categoriesData = [
+  { slug: "beauty", name: "Beauty" },
+  { slug: "fragrances", name: "Fragrances" },
+  { slug: "furniture", name: "Furniture" }
 ];
+
+export default categoriesData;
