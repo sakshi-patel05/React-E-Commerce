@@ -5,7 +5,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get("https://dummyjson.com/products?limit=10")
+        axios.get("https://dummyjson.com/products")
             .then((response) => {
                 setProducts(response.data.products)
             })

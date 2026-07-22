@@ -58,7 +58,7 @@ const SearchCategory = () => {
 
                 {/* Cards Grid - Mobile par 2 columns */}
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6'>
-                    {categories.slice(0,12).map((category, index) => {
+                    {categories.map((category, index) => {
                         const categoryImage = categoriesData.find(
                             (item) => item.slug === category.slug
                         );
