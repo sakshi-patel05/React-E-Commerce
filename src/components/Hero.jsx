@@ -4,16 +4,15 @@ const Hero = () => {
     return (
         <section 
         id='home'
-        className='bg-[#F7F2EC] py-12 md:py-17'
-       
+        className='bg-[#F7F2EC] py-8 md:py-17'
         >
-            <div className='max-w-7xl mx-auto px-5'>
+            <div className='max-w-7xl mx-auto px-4 sm:px-5'>
                 
                 {/* Main Banner Card */}
-                <div className='relative bg-[#F3ECE4] rounded-3xl p-8 md:p-14 overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-2 items-center gap-8'>
+                <div className='relative bg-[#F3ECE4] rounded-3xl p-6 sm:p-8 md:p-14 overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-2 items-center gap-8'>
                     
-                    {/* Background Decorative Circle / Shape */}
-                    <div className='absolute right-10 top-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[450px] md:h-[450px] bg-[#E8DDD1] rounded-full -z-0 pointer-events-none'></div>
+                    {/* Background Decorative Circle / Shape - Mobile par size chota aur responsive kiya gaya hai */}
+                    <div className='absolute right-2 sm:right-10 top-1/2 -translate-y-1/2 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] bg-[#E8DDD1] rounded-full -z-0 pointer-events-none opacity-60 md:opacity-100'></div>
 
                     {/* Left Side Content */}
                     <div className='z-10 space-y-4 text-center md:text-left'>
@@ -21,28 +20,28 @@ const Hero = () => {
                             New Arrivals
                         </p>
                         
-                        <h1 className='text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-none'>
+                        <h1 className='text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-none'>
                             JUST FOR <br />
                             <span className='text-gray-900 font-serif italic'>you</span>
                         </h1>
 
                         {/* Discount Badge Box */}
-                        <div className='inline-block bg-black text-white px-5 py-2.5 rounded-lg text-sm md:text-base font-bold tracking-wide shadow-md'>
+                        <div className='inline-block bg-black text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm md:text-base font-bold tracking-wide shadow-md'>
                             FOR ONLINE <span className='text-amber-400'>30%</span> ORDER <span className='text-amber-400'>OFF</span>
                         </div>
 
-                        <div className='pt-4 flex justify-center md:justify-start gap-4'>
-                            <button className='bg-black hover:bg-gray-800 text-white font-medium px-7 py-3 rounded-xl transition-all duration-300 cursor-pointer shadow-md'>
+                        <div className='pt-2 sm:pt-4 flex justify-center md:justify-start gap-4'>
+                            <button className='bg-black hover:bg-gray-800 text-white font-medium px-6 sm:px-7 py-2.5 sm:py-3 rounded-xl transition-all duration-300 cursor-pointer shadow-md text-sm sm:text-base'>
                                 Shop Now
                             </button>
                         </div>
                     </div>
                      {/* Right Side Image / Model Showcase */}
                     <div className='relative z-10 flex justify-center items-center'>
-                        <div className='w-full max-w-sm h-[320px] md:h-[400px] flex items-center justify-center bg-[#E5D7C9] rounded-2xl overflow-hidden shadow-inner border border-[#D9C8B5]'>
-                            <span className='text-gray-500 font-medium text-sm text-center px-4'>
-                              <img className='' src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b3/2a/f7/60/3c/v1_E10/E1019BL0.jpg?w=1400&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=b792572b5e9f56550e922e78e0d59bfe349c943bdf9c8f1ef0fddc5416787c04"
-                               alt="" />
+                        <div className='w-full max-w-sm h-[280px] sm:h-[320px] md:h-[400px] flex items-center justify-center bg-[#E5D7C9] rounded-2xl overflow-hidden shadow-inner border border-[#D9C8B5]'>
+                            <span className='text-gray-500 font-medium text-sm text-center px-4 w-full h-full'>
+                                <img className='w-full h-full object-cover' src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b3/2a/f7/60/3c/v1_E10/E1019BL0.jpg?w=1400&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=b792572b5e9f56550e922e78e0d59bfe349c943bdf9c8f1ef0fddc5416787c04"
+                                alt="" />
                             </span>
                         </div>
                     </div>
