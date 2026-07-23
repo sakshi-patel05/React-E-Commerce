@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+    const form = useRef();
+    const [status, setStatus] = useState("");
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_ngb8xhf', 
+            'template_cx79zre', 
+            form.current, 
+            'FG8hztFPVF3dVEe1D'
+        )
+        .then((result) => {
+            console.log(result.text);
+            setStatus("Message sent successfully!");
+            form.current.reset();
+        }, (error) => {
+            console.log(error.text);
+            setStatus("Failed to send message, please try again.");
+        });
+    };
+
     return (
         <div className='bg-[#F7F2EC] py-16'
         id='contact'
@@ -60,11 +83,13 @@ const Contact = () => {
 
                     {/* Right Side: Contact Form */}
                     <div className='bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100'>
-                        <form onSubmit={(e) => e.preventDefault()} className='space-y-6'>
+                        <form ref={form} onSubmit={sendEmail} className='space-y-6'>
                             <div>
                                 <label className='block text-sm font-semibold text-gray-700 mb-2'>Your Name</label>
                                 <input 
                                     type='text' 
+                                    name='from_name'
+                                    required
                                     placeholder='Enter your name' 
                                     className='w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-black transition-colors text-sm'
                                 />
@@ -74,6 +99,8 @@ const Contact = () => {
                                 <label className='block text-sm font-semibold text-gray-700 mb-2'>Your Email</label>
                                 <input 
                                     type='email' 
+                                    name='from_email'
+                                    required
                                     placeholder='Enter your email' 
                                     className='w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-black transition-colors text-sm'
                                 />
@@ -82,7 +109,9 @@ const Contact = () => {
                             <div>
                                 <label className='block text-sm font-semibold text-gray-700 mb-2'>Your Message</label>
                                 <textarea 
+                                    name='message'
                                     rows='4' 
+                                    required
                                     placeholder='Type your message here...' 
                                     className='w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-black transition-colors text-sm resize-none'
                                 ></textarea>
@@ -94,6 +123,12 @@ const Contact = () => {
                             >
                                 Send Message
                             </button>
+
+                            {status && (
+                                <p className='text-center text-xs font-semibold mt-2 text-amber-700'>
+                                    {status}
+                                </p>
+                            )}
                         </form>
                     </div>
 
